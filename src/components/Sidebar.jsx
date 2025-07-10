@@ -13,7 +13,7 @@ const Sidebar = () => {
                 <div className="flex gap-6 items-center">
                     <div className="text-left">
                         <h1 className="text-5xl font-extrabold text-gray-200">Muhammad Hubaib</h1>
-                        <p className="text-lg text-gray-400 font-bold mt-1">Frontend Developer</p>
+                        <p className="text-lg text-gray-400 font-bold mt-1">FullStack Developer</p>
                     </div>
                 </div>
                 <div>
@@ -23,15 +23,14 @@ const Sidebar = () => {
                 </div>
 
                 {/* navigasi */}
-                <div>
+                <div className="flex flex-col gap-1/4" id='navigasi'>
                     <Navigasi href="#about">Tentang</Navigasi>
-                    <Navigasi href="#skills">Keahlian</Navigasi>
-                    <Navigasi href="#projects">Proyek</Navigasi>
+                    <Navigasi href="#project">Proyek</Navigasi>
                     <Navigasi href="#experience">Pengalaman</Navigasi>
                 </div>
 
                 {/* social media */}
-                <div className="flex gap-6 m-12">
+                <div className="flex gap-6 m-12" id='social-media'>
                     <SocialLink href="https://github.com/yourusername">
                         <FaGithub />
                     </SocialLink>
