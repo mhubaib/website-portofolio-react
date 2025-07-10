@@ -1,6 +1,5 @@
 import { IoLogoInstagram } from "react-icons/io5";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { ImMail } from "react-icons/im";
 import Navigasi from "./Navigasi";
 import SocialLink from "./SocialLink";
 
@@ -30,17 +29,14 @@ const MainContent = () => {
 
                 {/* social media */}
                 <div className="flex justify-center md:justify-start gap-6 m-12" id='social-media'>
-                    <SocialLink href="https://github.com/yourusername">
+                    <SocialLink href="https://github.com/mhubaib">
                         <FaGithub />
                     </SocialLink>
-                    <SocialLink href="https://linkedin.com/in/yourusername">
+                    <SocialLink href="https://www.linkedin.com/in/muhammad-hubaib-76b26b370/">
                         <FaLinkedin />
                     </SocialLink>
-                    <SocialLink href="https://github.com/yourusername">
+                    <SocialLink href="https://instagram.com/mhuba_ib">
                         <IoLogoInstagram />
-                    </SocialLink>
-                    <SocialLink href="https://github.com/yourusername">
-                        <ImMail />
                     </SocialLink>
                 </div>
             </div>
