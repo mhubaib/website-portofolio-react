@@ -5,11 +5,10 @@ import Navigasi from "./Navigasi";
 import SocialLink from "./SocialLink";
 
 
-
-const Sidebar = () => {
+const MainContent = () => {
     return (
-        <div className="w-full bg-[#07162c] p-6">
-            <div className="flex flex-col text-center p-10 gap-14">
+        <div className="w-full bg-[#07162c] md:p-6">
+            <div className="flex flex-col text-center p-8 py-18 md:p-10 gap-14">
                 <div className="flex gap-6 items-center">
                     <div className="text-left">
                         <h1 className="text-5xl font-extrabold text-gray-200">Muhammad Hubaib</h1>
@@ -18,19 +17,19 @@ const Sidebar = () => {
                 </div>
                 <div>
                     <p className="text-lg text-gray-500 mt-4 max-w-lg text-justify">
-                        Seorang pengembang web berdedikasi dengan passion dalam menciptakan pengalaman digital yang menarik dan fungsional.
+                        A dedicated web developer with a passion for creating engaging and functional digital experiences.
                     </p>
                 </div>
 
                 {/* navigasi */}
-                <div className="flex flex-col gap-1/4" id='navigasi'>
-                    <Navigasi href="#about">Tentang</Navigasi>
-                    <Navigasi href="#project">Proyek</Navigasi>
-                    <Navigasi href="#experience">Pengalaman</Navigasi>
+                <div className="hidden md:flex flex-col gap-1/4">
+                    <Navigasi href="#about">About</Navigasi>
+                    <Navigasi href="#project">Project</Navigasi>
+                    <Navigasi href="#experience">Experience</Navigasi>
                 </div>
 
                 {/* social media */}
-                <div className="flex gap-6 m-12" id='social-media'>
+                <div className="flex justify-center md:justify-start gap-6 m-12" id='social-media'>
                     <SocialLink href="https://github.com/yourusername">
                         <FaGithub />
                     </SocialLink>
@@ -49,4 +48,4 @@ const Sidebar = () => {
     )
 }
 
-export default Sidebar;
+export default MainContent;
