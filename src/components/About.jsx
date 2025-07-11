@@ -1,5 +1,5 @@
 import React from 'react'
-import ProfileImage from '../assets/hubaib.jpg'
+import ProfileImage from '../assets/hubaib.JPG'
 import {
     FaHtml5,
     FaCss3Alt,
