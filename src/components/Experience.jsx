@@ -77,8 +77,7 @@ const EmptyExperience = () => {
                 Belum Ada Pengalaman
             </h3>
             <p className="text-gray-500 text-center max-w-md">
-                Pengalaman kerja Anda akan muncul di sini.
-                Mulai bangun portfolio Anda dengan menambahkan pengalaman kerja yang relevan.
+                Sedang memulai bangun portfolio dan akan menambahkan pengalaman kerja yang relevan disini.
             </p>
         </div>
     )
