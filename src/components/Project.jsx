@@ -50,7 +50,7 @@ const ProjectCard = ({ title, description, technologies, githubLink, liveLink, s
             <div className="flex-1">
                 <div className="flex justify-between items-center mb-4">
                     <h3 className="text-xl font-bold text-cyan-400">{title}</h3>
-                    <div className="flex gap-4">
+                    <div className="flex shrink-0 gap-4">
                         {githubLink && (
                             <a
                                 href={githubLink}

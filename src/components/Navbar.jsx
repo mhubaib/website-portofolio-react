@@ -24,7 +24,7 @@ const Navbar = ({ title }) => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.scrollY;
-            setIsScrolled(scrollTop > 50); // Ubah opacity setelah scroll 50px
+            setIsScrolled(scrollTop > 50);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -60,7 +60,7 @@ const Navbar = ({ title }) => {
         md:hidden
         `}
             >
-                <div className="flex justify-start gap-8 p-4">
+                <div className="flex justify-start gap-5 p-4">
                     <button
                         aria-label="Close navigation"
                         onClick={() => setSidebarOpen(false)}
@@ -68,7 +68,7 @@ const Navbar = ({ title }) => {
                     >
                         <FaTimes />
                     </button>
-                    <span className='text-white text-2xl font-bold'>Portofolio</span>
+                    <span className='text-white text-2xl mt-1 font-bold hover:text-cyan-400'>Portofolio</span>
                 </div>
                 <nav className="flex flex-col gap-3 px-4 mt-8">
                     {navLinks.map((link) => (

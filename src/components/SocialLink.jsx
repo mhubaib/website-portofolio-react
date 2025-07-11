@@ -7,7 +7,7 @@ const SocialLink = ({ href, children }) => {
             target="_blank"
             rel="noopener noreferrer"
             className="
-                text-2xl 
+                text-3xl 
                 text-gray-400 
                 hover:text-cyan-400 
                 transition-colors 
