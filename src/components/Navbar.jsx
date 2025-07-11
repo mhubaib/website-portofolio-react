@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const navLinks = [
@@ -7,8 +7,9 @@ const navLinks = [
     // Tambahkan link lain jika perlu
 ];
 
-const Navbar = ({title}) => {
+const Navbar = ({ title }) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const handleNavClick = (id) => {
         setSidebarOpen(false);
@@ -19,9 +20,24 @@ const Navbar = ({title}) => {
         }
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            setIsScrolled(scrollTop > 50); // Ubah opacity setelah scroll 50px
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <div className='mb-16'>
-            <div className="w-full h-[10vh] bg-[#091a36] fixed top-0 z-50 flex items-center justify-between px-4 -translate-y-0 transition-transform duration-600 ease-in-out transform">
+        <div className='mb-12'>
+            <div
+                className={`w-full h-[10vh] fixed top-0 z-50 flex items-center justify-between px-4 transition-all duration-300 ${isScrolled
+                        ? 'bg-[#091a36]/80 backdrop-blur-sm'
+                    : 'bg-[#07162c]'
+                    }`}
+            >
                 <div className="flex-1 flex md:justify-start">
                     <h1 className="text-xl font-bold text-gray-200">{title}</h1>
                 </div>
@@ -30,7 +46,7 @@ const Navbar = ({title}) => {
                     <button
                         aria-label="Open navigation"
                         onClick={() => setSidebarOpen(true)}
-                        className="text-cyan-400 text-2xl focus:outline-none transition-transform duration-300 ease-in-out"
+                        className="text-cyan-400 text-2xl focus:outline-none"
                     >
                         <FaBars />
                     </button>

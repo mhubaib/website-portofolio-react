@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import MainContent from './components/MainContent'
-import About from './components/about'
+import About from './components/About'
 import Project from './components/Project'
 import Navbar from './components/Navbar'
 

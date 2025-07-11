@@ -13,19 +13,21 @@ const ProjectCard = ({ title, description, technologies, githubLink, liveLink, s
             bg-[#07162c]
             rounded-lg 
             p-5 
-            mb-6 
+            mb-6
             hover:bg-[#112240] 
             transition-colors 
             duration-300 
             group
-            flex items-start gap-6
+            md:flex items-start gap-6
         ">
             <div className="
                 w-40 
                 h-30 
                 bg-[#0a192f] 
-                rounded-lg  
-                flex 
+                rounded-lg 
+                mb-4
+                md:mb-0 
+                md:flex 
                 items-center 
                 justify-center
                 text-cyan-400
@@ -122,12 +124,13 @@ const Project = () => {
 
     return (
         <div className='w-full bg-[#07162c] min-h-screen p-6'>
-            <div className='max-w-4xl mx-auto'>
-                <div className='flex items-center gap-4 mb-10 mt-4'>
+            <div className='max-w-4xl mx-auto flex flex-col'>
+                <div className='flex items-center gap-2 mb-4 md:mb-10 md:mt-4'>
                     <h1 className='text-xl font-bold text-cyan-400'>02. </h1>
                     <h1 className='text-2xl font-bold text-gray-200'>Projects</h1>
-                    <span className='w-[300px] h-[1px] bg-cyan-400'></span>
+                    <span className='hidden md:inline w-[300px] h-[1px] bg-cyan-400'></span>
                 </div>
+                <span className='w-[300px] h-[1px] bg-cyan-400 mb-6 md:hidden '></span>
 
                 {projects.map((project, index) => (
                     <ProjectCard
