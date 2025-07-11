@@ -4,6 +4,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 const navLinks = [
     { name: "About", href: "#about" },
     { name: "Project", href: "#project" },
+    { name: "Experience", href: "#experience"}
     // Tambahkan link lain jika perlu
 ];
 

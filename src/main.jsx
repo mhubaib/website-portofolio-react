@@ -19,7 +19,6 @@ const updateMousePosition = (ev) => {
 // Tambahkan event listener saat komponen dimuat
 document.addEventListener('mousemove', updateMousePosition);
 
-// Hapus event listener saat komponen di-unmount (opsional)
 const root = createRoot(document.getElementById('root'));
 root.render(
   <StrictMode>

@@ -24,7 +24,7 @@ const About = () => {
     ];
 
     return (
-        <div className='max-w-screen bg-[#07162c] md:top-0 md:right-0'>
+        <div className='max-w-screen bg-[#07162c] relative'>
             <div className='flex flex-col gap-4 p-6 md:p-12 pt-10'>
                 <div className='flex items-center gap-2'>
                     <h1 className='text-xl font-bold text-cyan-400'>01. </h1>

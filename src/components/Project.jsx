@@ -123,21 +123,23 @@ const Project = () => {
     ]
 
     return (
-        <div className='w-full bg-[#07162c] min-h-screen p-6'>
-            <div className='max-w-4xl mx-auto flex flex-col'>
+        <div className='w-full bg-[#07162c] max-w-screen min-h-screen p-6'>
+            <div className='flex flex-col'>
                 <div className='flex items-center gap-2 mb-4 md:mb-10 md:mt-4'>
                     <h1 className='text-xl font-bold text-cyan-400'>02. </h1>
                     <h1 className='text-2xl font-bold text-gray-200'>Projects</h1>
                     <span className='hidden md:inline w-[300px] h-[1px] bg-cyan-400'></span>
                 </div>
-                <span className='w-[300px] h-[1px] bg-cyan-400 mb-6 md:hidden '></span>
+                <span className='w-[300px] h-[1px] bg-cyan-400 mb-6 md:hidden'></span>
 
-                {projects.map((project, index) => (
-                    <ProjectCard
-                        key={index}
-                        {...project}
-                    />
-                ))}
+                <div className="grid gap-6">
+                    {projects.map((project, index) => (
+                        <ProjectCard
+                            key={index}
+                            {...project}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     )

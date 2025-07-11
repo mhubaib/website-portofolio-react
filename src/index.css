@@ -18,13 +18,13 @@ body::before {
     height: 200%;
     background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
             rgba(4, 169, 245, 0.1) 0%,
-            transparent 50%);
+            transparent 80%);
     pointer-events: none;
     z-index: 9999;
 }
 
 body:hover::before {
-    opacity: 1;
+    opacity: 1.5;
 }
 
 * {

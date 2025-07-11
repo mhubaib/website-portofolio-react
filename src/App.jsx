@@ -3,6 +3,7 @@ import MainContent from './components/MainContent'
 import About from './components/About'
 import Project from './components/Project'
 import Navbar from './components/Navbar'
+import Experience from './components/Experience'
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
@@ -19,8 +20,9 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = [
-        {id: 'about', name: 'About'},
-        {id: 'project', name: 'Project'}
+        { id: 'about', name: 'About' },
+        { id: 'project', name: 'Project' },
+        { id: 'experience', name: 'Experience' }
       ];
       let current = 'Portofolio';
       for (const section of sections) {
@@ -35,23 +37,27 @@ function App() {
       setActiveSection(current);
     };
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
     return () => window.removeEventListener('scroll', handleScroll);
   }, [])
 
   return (
-    <div className="w-full h-screen bg-[#07162c]">
+    <div className="w-full h-screen bg-[#07162c] relative">
       {/* halaman yang muncul ketika di screen besar */}
       {!isMobile && (
-        <div className="flex">
+        <div className="flex relative">
           <div className='w-[50vw] fixed h-screen top-0 left-0'>
             <MainContent />
           </div>
-          <div className='ml-[50vw] overflow-y-auto top-0 right-0 w-full min-h-screen'>
-            <section id='about'>
+          <div className='ml-[50vw] top-0 right-0 w-full relative'>
+            <section id='about' className="relative">
               <About />
             </section>
-            <section id='project'>
+            <section id='project' className="relative">
               <Project />
+            </section>
+            <section id='experience' className="relative">
+              <Experience />
             </section>
           </div>
         </div>
@@ -59,14 +65,17 @@ function App() {
 
       {/* halaman yang muncul ketika di screen kecil */}
       {isMobile && (
-        <div className='w-full h-screen bg-[#07162c]'>
+        <div className='w-full h-screen bg-[#07162c] relative'>
           <Navbar title={activeSection} />
           <MainContent />
-          <section id='about'>
+          <section id='about' className="relative">
             <About />
           </section>
-          <section id='project'>
+          <section id='project' className="relative">
             <Project />
+          </section>
+          <section id='experience' className="relative">
+            <Experience />
           </section>
         </div>
       )}
